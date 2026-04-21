@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-instrument-serif: "Instrument Serif", serif;
+  --font-helvetica: Helvetica, Arial, "HelveticaNeue", "Helvetica Neue Light",
+    "HelveticaNeue-Light", "Lucida Grande", sans-serif;
+  --color-primary: #ce512b;
+  --color-secondary: #f2f0e5;
+  --color-gray: #3c3634;
+}
+
+@layer utilities {
+  /* Menyembunyikan scrollbar untuk Chrome, Safari dan Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menyembunyikan scrollbar untuk IE, Edge dan Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
