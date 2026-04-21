@@ -359,7 +359,131 @@
     <!-- Books Borrowing Section -->
     <section class="min-h-screen px-4 py-4 bg-gray">
       <p class="text-8xl text-center text-secondary">✦✦✦✦✦✦</p>
-      <div class="h-[calc(100vh-132px)] bg-primary rounded-2xl mt-2"></div>
+      <div
+        class="h-[calc(100vh-132px)] p-4 bg-primary rounded-2xl mt-2 flex flex-col"
+      >
+        <h2
+          class="text-6xl font-instrument-serif opacity-90 mt-2 uppercase shrink-0"
+        >
+          Mau minjem buku? <br /><span class="italic">Gini caranya!</span>
+        </h2>
+        <p class="text-base tracking-tight font-light mt-4 shrink-0">
+          Tidak perlu daftar akun, pinjam buku dalam 3 langkah mudah.
+        </p>
+
+        <a
+          href="#"
+          class="shrink-0 w-full inline-flex items-center justify-between gap-4 bg-primary border border-gray text-white rounded-sm py-2 pl-4 pr-2 mt-4"
+        >
+          <span
+            class="text-base text-gray font-semibold tracking-wide uppercase"
+          >
+            Mulai Pinjam Sekarang
+          </span>
+          <div
+            class="flex items-center justify-center bg-gray text-secondary w-10 h-10 rounded-sm"
+          >
+            <i class="ri-arrow-right-up-line text-xl"></i>
+          </div>
+        </a>
+        <div class="relative flex-1 overflow-y-auto scrollbar-hide mt-8">
+          <!-- Card 1 -->
+          <div
+            class="sticky top-0 h-64 flex flex-col justify-between p-4 bg-primary border border-gray rounded-2xl"
+          >
+            <div class="flex justify-between">
+              <h3 class="text-6xl font-light tracking-tight">Pilih Buku</h3>
+              <p class="text-4xl">01</p>
+            </div>
+            <p class="font-instrument-serif text-2xl">
+              Cari buku yang kamu butuhkan
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="sticky top-20 h-64 flex flex-col justify-between p-4 bg-primary border border-gray rounded-2xl mt-4"
+          >
+            <div class="flex justify-between">
+              <h3 class="text-6xl font-light tracking-tight">Isi Data Diri</h3>
+              <p class="text-4xl">02</p>
+            </div>
+            <p class="font-instrument-serif text-2xl">
+              Lengkapi data peminjaman
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="sticky top-40 h-64 flex flex-col justify-between p-4 bg-primary border border-gray rounded-2xl mt-4"
+          >
+            <div class="flex justify-between">
+              <h3 class="text-6xl font-light tracking-tight">Ambil Buku</h3>
+              <p class="text-4xl">03</p>
+            </div>
+            <p class="font-instrument-serif text-2xl">
+              Datang dan ambil bukumu
+            </p>
+          </div>
+
+          <!-- Spacer so last card can fully scroll up -->
+          <div class="h-64"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="min-h-screen bg-secondary">
+      <div class="relative w-full h-screen overflow-hidden">
+        <img
+          src="/assets/about-img-mobile.jpg"
+          class="vignette absolute inset-0 w-full h-full object-cover lg:hidden"
+          alt="Mobile Background"
+        />
+        <img
+          src="/assets/about-img-desktop.jpg"
+          class="absolute inset-0 w-full h-full object-cover hidden lg:block"
+          alt="Desktop Background"
+        />
+
+        <div class="absolute inset-x-0 top-0 h-3/5 bg-linear-to-b from-black/80 to-transparent z-0"></div>
+  
+        <div class="absolute inset-x-0 bottom-0 h-3/5 bg-linear-to-t from-black/80 to-transparent z-0"></div>
+
+        <div class="relative z-10 w-full h-full flex flex-col py-4 px-4">
+          <!-- <div class="text-white my-15 mx-8 flex flex-col gap-7">
+            <h1 class="text-6xl">Picked for You</h1>
+            <p class="text-sm">01</p>
+            <p class="text-2xl">
+              Welcome to <span class="bg-primary p-0.5">Wilson Tennis</span>,
+              the industry leader in
+              <span class="bg-primary p-0.5">premium tennis equipment</span> for
+              over a century.
+            </p>
+          </div> -->
+        <!-- </div> -->
+
+        <p class=" text-2xl text-white font-semibold tracking-tight opacity-90 mt-2 shrink-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptas est consequatur molestiae maxime obcaecati? Ut reprehenderit nulla quod numquam nostrum perferendis quibusdam voluptatem dolorem recusandae assumenda sit, accusantium minus.</p>
+      </div>
+
+      <!-- <div class="mt-8">
+        <h1 class="text-5xl lg:text-7xl max-w-2xl">
+          Wilson Tennis, the <span class="text-primary">premium</span> tennis
+          equipment.
+        </h1>
+        <p class="w-90 mt-6 text-lg text-gray-500">
+          Welcome to Wilson Tennis, the industry leader in premium tennis
+          equipment for over a century
+        </p>
+
+        <div class="border-b border-gray-400 mt-4 w-60"></div>
+
+        <button
+          class="mt-6 uppercase bg-gray-100 py-3 px-8 rounded-full font-medium text-xs hover:bg-[#696159] hover:border-[#696159] hover:text-white transform duration-300 cursor-pointer"
+        >
+          Get Started
+        </button>
+      </div> -->
     </section>
   </body>
 </html>
