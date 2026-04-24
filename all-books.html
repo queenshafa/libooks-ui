@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/src/output.css" />
+    <!-- Remixicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <title>✦ – Libooks</title>
+  </head>
+  <body class="font-helvetica">
+    <!-- Navbar -->
+    <button
+      id="open-menu"
+      class="fixed bottom-6 right-6 z-2100 bg-white text-gray w-14 h-14 rounded-full flex flex-col items-center justify-center gap-1.25"
+    >
+      <span
+        class="burger-line block w-5 h-0.5 bg-current transition-all duration-500"
+      ></span>
+      <span
+        class="burger-line block w-5 h-0.5 bg-current transition-all duration-500"
+      ></span>
+    </button>
+
+    <!-- Fullscreen Menu Overlay -->
+    <nav
+      id="mega-menu"
+      class="fixed inset-0 w-screen h-screen text-white pointer-events-none"
+      style="z-index: 2000"
+    >
+      <div
+        id="menu-bg"
+        class="absolute inset-0 bg-black"
+        style="
+          transform: scaleY(0);
+          transform-origin: bottom;
+          transition: transform 0.7s ease-in-out;
+        "
+      ></div>
+
+      <div
+        id="menu-content"
+        class="relative z-10 h-full flex flex-col justify-between px-6 py-10"
+        style="opacity: 0; transition: opacity 0.3s ease 0.3s"
+      >
+        <div class="text-2xl font-medium tracking-tight">Libooks ✦</div>
+
+        <!-- Nav -->
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Home</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Collection</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Categories</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Books Borrowing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
+              >Login</a
+            >
+          </li>
+        </ul>
+
+        <!-- Bottom info -->
+        <div
+          class="border-t border-white/20 pt-4 flex justify-between items-end text-sm font-light tracking-tight opacity-60"
+        >
+          <p>Mon - Fri: 07:30 - 18:30</p>
+          <p class="pr-16">hello@libooks.com</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="w-full bg-pattern px-8 py-8 text-gray">
+      <!-- <div
+        class="absolute inset-0 z-0"
+        style="
+          backgroundimage: radial-gradient(
+              circle at 50% 100%,
+              rgba(253, 224, 71, 0.4) 0%,
+              transparent 60%
+            ),
+            radial-gradient(
+              circle at 50% 100%,
+              rgba(251, 191, 36, 0.4) 0%,
+              transparent 70%
+            ),
+            radial-gradient(
+              circle at 50% 100%,
+              rgba(244, 114, 182, 0.5) 0%,
+              transparent 80%
+            );
+        "
+      > -->
+      <div class="bg-pattern">
+        <h1 class="text-4xl font-medium tracking-tight mt-80">
+          <span class="opacity-40">From our Mind, to yours</span> <br />
+          The exact tools we use to run Highful Minds
+        </h1>
+        <p class="mt-8 text-lg tracking-tight">
+          We've opened up the exact templates we use every day at Highful Minds
+          and shared them with fellow designers and studios. <br />
+          <br />
+          Because we truly believe great ideas deserve to be understood and
+          felt.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="relative px-8 py-16 bg-white">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div
+          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+        >
+          <!-- Background image — hidden by default, fades in on hover -->
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          <div
+            class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
+          >
+            <!-- Book image — visible by default, hides on hover -->
+            <img
+              src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
+              alt="The Let Them Theory"
+              class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
+            />
+
+            <p
+              class="mt-8 font-light tracking-tight transition-colors duration-300"
+            >
+              Self-Improvement
+            </p>
+            <h3
+              class="mt-4 text-lg text-center font-semibold transition-colors duration-300"
+            >
+              The Let Them Theory
+            </h3>
+          </div>
+
+          <div
+            class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
+          >
+            <a href="#" class="border-r border-r-white pr-4">View Book</a>
+            <p>$50.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray text-white">
+      <!-- Mobile -->
+      <div class="lg:hidden min-h-screen px-4 py-4 text-center">
+        <p class="text-5xl mt-45"><i class="ri-asterisk"></i></p>
+        <div class="bg-primary w-full">
+          <h2 class="text-9xl text-gray mt-8">Libooks</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="border-b border-b-white py-4 mt-8">
+            <p class="text-2xl px-20 text-white tracking-tight font-medium">
+              <a href="#">Your Entire <br />World, Indexed.</a>
+            </p>
+          </div>
+          <div class="border-b border-b-white py-4">
+            <p class="text-2xl px-20 text-white tracking-tight font-medium">
+              <a href="#">More Info About <br />Libooks</a>
+            </p>
+          </div>
+          <div class="border-b border-b-white py-4">
+            <p class="text-2xl px-20 text-white tracking-tight font-medium">
+              Instagram <br />@itslibooks
+            </p>
+          </div>
+          <div class="py-4">
+            <p class="text-2xl px-20 text-white tracking-tight font-medium">
+              Facebook <br />@itslibooks
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop -->
+      <div
+        class="hidden lg:flex sticky bottom-0 lg:flex-col lg:justify-end lg:pt-20"
+      >
+        <div class="flex-1 flex items-end mb-8 justify-center">
+          <p class="text-5xl"><i class="ri-asterisk"></i></p>
+        </div>
+        <div class="bg-primary w-full overflow-hidden">
+          <h2
+            class="text-gray font-medium text-[165px] py-4 text-center leading-none whitespace-nowrap"
+          >
+            The Libooks E-Library
+          </h2>
+        </div>
+        <div class="flex items-stretch" style="min-height: 100px">
+          <div
+            class="flex-1 flex items-center justify-center border-r border-white/30 px-8 py-6"
+          >
+            <p
+              class="text-lg text-white tracking-tight font-medium text-center leading-snug"
+            >
+              <a href="#">Your Entire<br />World, Indexed.</a>
+            </p>
+          </div>
+          <div
+            class="flex-1 flex items-center justify-center border-r border-white/30 px-8 py-6"
+          >
+            <p
+              class="text-lg text-white tracking-tight font-medium text-center leading-snug"
+            >
+              <a href="#">More Info About<br />Libooks</a>
+            </p>
+          </div>
+          <div
+            class="flex-1 flex items-center justify-center border-r border-white/30 px-8 py-6"
+          >
+            <p
+              class="text-lg text-white tracking-tight font-medium text-center leading-snug"
+            >
+              Instagram<br />@itslibooks
+            </p>
+          </div>
+          <div class="flex-1 flex items-center justify-center px-8 py-6">
+            <p
+              class="text-lg text-white tracking-tight font-medium text-center leading-snug"
+            >
+              Facebook<br />@itslibooks
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Navbar thingy
+      const btn = document.getElementById("open-menu");
+      const menuBg = document.getElementById("menu-bg");
+      const menuContent = document.getElementById("menu-content");
+      const menu = document.getElementById("mega-menu");
+      const burgerLines = document.querySelectorAll(".burger-line");
+      let open = false;
+
+      btn.addEventListener("click", () => {
+        open = !open;
+
+        if (open) {
+          menu.style.pointerEvents = "all";
+          menuBg.style.transform = "scaleY(1)";
+          menuContent.style.opacity = "1";
+
+          burgerLines[0].style.transform = "translateY(3.5px) rotate(45deg)";
+          burgerLines[1].style.transform = "translateY(-3.5px) rotate(-45deg)";
+        } else {
+          menu.style.pointerEvents = "none";
+          menuBg.style.transform = "scaleY(0)";
+          menuContent.style.opacity = "0";
+          burgerLines[0].style.transform = "";
+          burgerLines[1].style.transform = "";
+        }
+      });
+    </script>
+  </body>
+</html>
