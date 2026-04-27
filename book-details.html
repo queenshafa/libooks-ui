@@ -133,178 +133,142 @@
       </div>
     </nav>
 
-    <!-- Main -->
-    <section class="min-h-screen bg-white py-8 px-8">
-      <div class="flex flex-col">
-        <!-- Book Img -->
+    <section class="min-h-screen bg-white py-8 px-8 lg:px-16">
+      <div
+        class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-center lg:gap-24"
+      >
+        <span>
+          <a
+            href="index.html"
+            class="bg-primary py-2 px-6 my-4 lg:text-lg rounded-lg text-white"
+            ><i class="ri-arrow-left-line"></i> Back</a
+          >
+        </span>
+      </div>
+      <div class="flex items-center mt-4 lg:mt-8">
         <div
-          class="bg-primary flex flex-col justify-center items-center h-1/2 rounded-tl-2xl rounded-br-2xl py-20"
+          class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-center lg:gap-24"
         >
-          <div>
+          <div
+            class="bg-primary flex flex-col justify-center items-center w-full lg:w-1/2 min-h-[500px] lg:h-[750px] rounded-br-2xl rounded-tl-2xl p-12 shadow-xl"
+          >
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
-              class="w-50 shadow-2xl"
+              class="w-64 lg:w-80 shadow-2xl transition-transform hover:scale-105 duration-300"
             />
-            <!-- Indicator -->
-            <div></div>
           </div>
-        </div>
-        <!-- Detail -->
-        <div class="mt-40 w-full">
-          <h1 class="text-5xl font-bold mb-4">The Let Them Theory</h1>
-          <!-- <span class="text-2xl py-1 px-2 text-white bg-primary">$11.00</span> -->
-          <!-- <p class="mt-4">Choose your cover type</p>
-          <div class="mt-2 flex w-full">
-            <ul class="w-full flex">
-              <li
-                type="radiogroup"
-                class="bg-secondary text-center py-5 px-3 rounded-2xl font-semibold"
-              >
-                Hard Cover
-              </li>
-              <li
-                class="bg-secondary text-center py-5 px-3 rounded-2xl font-semibold"
-              >
-                Hard Cover
-              </li>
-            </ul>
-          </div> -->
 
-          <h3 class="mb-2 text-lg font-medium mt-6">Choose your cover type</h3>
-          <ul class="grid w-full gap-3 grid-cols-2">
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Hard Cover</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Soft Cover</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-          </ul>
-          <h3 class="mb-2 text-lg font-medium mt-6">
-            Choose your library location
-          </h3>
-          <ul class="grid w-full gap-3 grid-cols-2">
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Kelapa Gading</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Shelburne</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Toronto</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="hosting-small"
-                name="hosting"
-                value="hosting-small"
-                class="hidden peer"
-                required
-              />
-              <label
-                for="hosting-small"
-                class="inline-flex items-center justify-center w-full p-5 bg-secondary rounded-2xl cursor-pointer peer-checked:hover:bg-primary peer-checked:bg-gray peer-checked:bg-brand-softer hover:bg-primary peer-checked:text-fg-brand-strong"
-              >
-                <div class="block">
-                  <div class="w-full">
-                    <p class="font-semibold">Harapan Indah Bekasi</p>
-                  </div>
-                </div>
-              </label>
-            </li>
-          </ul>
-          <div class="w-full mt-8">
-            <a
-              href="#"
-              class="block text-center bg-gray w-full py-4 font-semibold rounded-lg text-white"
-              >Borrow Now</a
+          <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
+            <h1 class="text-4xl lg:text-7xl font-bold mb-4 tracking-tight">
+              The Let Them Theory
+            </h1>
+            <p class="text-gray-500 text-lg mb-8">By Mel Robbins</p>
+
+            <div class="mb-8">
+              <h3 class="mb-4 text-xl font-bold">Choose your cover type</h3>
+              <ul class="grid grid-cols-2 gap-4">
+                <li>
+                  <input
+                    type="radio"
+                    id="hardcover"
+                    name="cover"
+                    class="hidden peer"
+                    required
+                  />
+                  <label
+                    for="hardcover"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold"
+                  >
+                    Hard Cover
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="softcover"
+                    name="cover"
+                    class="hidden peer"
+                  />
+                  <label
+                    for="softcover"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold"
+                  >
+                    Soft Cover
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-10">
+              <h3 class="mb-4 text-xl font-bold">
+                Choose your library location
+              </h3>
+              <ul class="grid grid-cols-2 gap-4">
+                <li>
+                  <input
+                    type="radio"
+                    id="loc1"
+                    name="loc"
+                    class="hidden peer"
+                  />
+                  <label
+                    for="loc1"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold text-center"
+                  >
+                    Kelapa Gading
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="loc2"
+                    name="loc"
+                    class="hidden peer"
+                  />
+                  <label
+                    for="loc2"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold text-center"
+                  >
+                    Shelburne
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="loc3"
+                    name="loc"
+                    class="hidden peer"
+                  />
+                  <label
+                    for="loc3"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold text-center"
+                  >
+                    Toronto
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="loc4"
+                    name="loc"
+                    class="hidden peer"
+                  />
+                  <label
+                    for="loc4"
+                    class="flex items-center justify-center p-5 bg-secondary rounded-2xl cursor-pointer border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary peer-checked:text-white transition-all font-semibold text-center"
+                  >
+                    Harapan Indah
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="w-full bg-[#3d3633] hover:bg-black py-5 text-xl font-bold rounded-2xl text-white transition-all transform active:scale-[0.98]"
             >
+              Borrow Now
+            </button>
           </div>
         </div>
       </div>
@@ -312,46 +276,56 @@
 
     <!-- Desc -->
     <section class="min-h-screen bg-secondary py-16 px-8">
-      <img src="/assets/all-books-img.jpg" alt="" class="rounded-2xl" />
-      <h2 class="text-4xl font-bold mt-4">About The Let Them Theory</h2>
-      <!-- <p class="mt-2 font-light">
+      <div class="flex flex-col lg:flex-row lg:gap-x-20 lg:mb-20">
+        <div>
+          <img
+            src="/assets/all-books-img.jpg"
+            alt=""
+            class="rounded-2xl lg:w-7xl"
+          />
+        </div>
+        <div class="lg:max-w-2xl">
+          <h2 class="text-4xl font-bold mt-4">About The Let Them Theory</h2>
+          <!-- <p class="mt-2 font-light">
         Author: <a href="#" class="font-semibold underline">Mel Robbins</a>
       </p>
       <p class="mt-2 font-light">
         Publisher:
         <a href="#" class="font-semibold underline">Gramedia Pustaka Utama</a>
       </p> -->
-      <p class="mt-4 font-light tracking-tight">
-        Let Them; Dua Kata Sederhana yang Akan Mengubah Cara Anda Berpikir
-        tentang Seluruh Hidup Anda <br />
-        <br />
-        Kalau Anda mengalami kesulitan untuk mencapai tujuan, atau untuk merasa
-        bahagia, masalahnya tidak terletak pada Anda. Masalahnya ada pada
-        kekuasaan yang Anda berikan kepada orang lain. Di buku ini, Anda akan
-        belajar betapa dua kata—Let Them—bisa membebaskan Anda. Bebas dari
-        opini, drama, dan penilaian orang lain. Bebas dari lingkaran melelahkan
-        untuk berusaha mengatur segala sesuatu dan semua orang di sekeliling
-        Anda. <br />
-        <br />
-        Ada cara yang lebih baik untuk hidup. <br />
-        <br />
-        The Let Them Theory adalah metode terbukti yang akan mengajari Anda cara
-        melindungi waktu dan energi, serta berfokus pada apa yang benar-benar
-        berarti bagi Anda. Anda sudah menghabiskan terlalu banyak waktu mengejar
-        persetujuan, mengatur kebahagiaan orang lain, dan membiarkan opini
-        mereka menahan langkah Anda. Pelajari cara menyerahkan kekuasaan dan
-        mulai menciptakan kehidupan tempat Anda menjadi yang utama—mimpi Anda,
-        tujuan Anda, kebahagiaan Anda. <br />
-        <br />
-        Let Them adalah alat sederhana yang tak bisa berhenti dibicarakan oleh
-        jutaan orang di seluruh dunia karena kemanjurannya. Cara tercepat untuk
-        memegang kendali atas hidup Anda adalah dengan berhenti berusaha
-        mengendalikan orang lain dan berfokus pada hal yang bisa Anda
-        kendalikan: diri Anda. <br />
-        <br />
-        Dengan membiarkan orang lain menjalani hidup mereka, Anda pada akhirnya
-        akan bisa menjalani hidup Anda.
-      </p>
+          <p class="mt-4 font-light tracking-tight">
+            Let Them; Dua Kata Sederhana yang Akan Mengubah Cara Anda Berpikir
+            tentang Seluruh Hidup Anda <br />
+            <br />
+            Kalau Anda mengalami kesulitan untuk mencapai tujuan, atau untuk
+            merasa bahagia, masalahnya tidak terletak pada Anda. Masalahnya ada
+            pada kekuasaan yang Anda berikan kepada orang lain. Di buku ini,
+            Anda akan belajar betapa dua kata—Let Them—bisa membebaskan Anda.
+            Bebas dari opini, drama, dan penilaian orang lain. Bebas dari
+            lingkaran melelahkan untuk berusaha mengatur segala sesuatu dan
+            semua orang di sekeliling Anda. <br />
+            <br />
+            Ada cara yang lebih baik untuk hidup. <br />
+            <br />
+            The Let Them Theory adalah metode terbukti yang akan mengajari Anda
+            cara melindungi waktu dan energi, serta berfokus pada apa yang
+            benar-benar berarti bagi Anda. Anda sudah menghabiskan terlalu
+            banyak waktu mengejar persetujuan, mengatur kebahagiaan orang lain,
+            dan membiarkan opini mereka menahan langkah Anda. Pelajari cara
+            menyerahkan kekuasaan dan mulai menciptakan kehidupan tempat Anda
+            menjadi yang utama—mimpi Anda, tujuan Anda, kebahagiaan Anda. <br />
+            <br />
+            Let Them adalah alat sederhana yang tak bisa berhenti dibicarakan
+            oleh jutaan orang di seluruh dunia karena kemanjurannya. Cara
+            tercepat untuk memegang kendali atas hidup Anda adalah dengan
+            berhenti berusaha mengendalikan orang lain dan berfokus pada hal
+            yang bisa Anda kendalikan: diri Anda. <br />
+            <br />
+            Dengan membiarkan orang lain menjalani hidup mereka, Anda pada
+            akhirnya akan bisa menjalani hidup Anda.
+          </p>
+        </div>
+      </div>
 
       <div id="accordion-card" data-accordion="collapse" class="mt-8">
         <h2 id="accordion-card-heading-1">
@@ -455,47 +429,71 @@
     </section>
 
     <!-- Details -->
-    <section class="min-h-screen min-w-screen bg-white py-8 px-8">
+    <section class="min-h-screen w-full bg-white p-8">
       <div
-        class="bg-primary rounded-4xl h-full w-full text-white flex flex-col justify-center p-8"
+        class="bg-primary min-h-[calc(100vh-4rem)] rounded-[3rem] text-white flex flex-col p-12 lg:p-24"
       >
-        <h2 class="text-4xl font-bold text-center">Book Details</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-y-10">
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Publisher</h3>
-            <p class="font-light text-2xl tracking-tight">
+        <h2 class="text-4xl lg:text-7xl font-bold text-center mb-16 lg:mb-24">
+          Book Details
+        </h2>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-y-16 lg:gap-y-24 gap-x-20 max-w-5xl mx-auto w-full"
+        >
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Publisher
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">
               Gramedia Pustaka Utama
             </p>
           </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Publisher</h3>
-            <p class="font-light text-2xl tracking-tight">
-              Gramedia Pustaka Utama
-            </p>
+
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Publishing Date
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">10 December 2025</p>
           </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Publishing Date</h3>
-            <p class="font-light text-2xl tracking-tight">10 December 2025</p>
+
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Page Number
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">328 Pages</p>
           </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Page Number</h3>
-            <p class="font-light text-2xl tracking-tight">328 Pages</p>
+
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Language
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">English</p>
           </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Language</h3>
-            <p class="font-light text-2xl tracking-tight">English</p>
+
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Dimensions
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">23.0 x 15.0 cm</p>
           </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Length</h3>
-            <p class="font-light text-2xl tracking-tight">23.0cm</p>
-          </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Width</h3>
-            <p class="font-light text-2xl tracking-tight">15.0cm</p>
-          </div>
-          <div>
-            <h3 class="font-bold text-2xl tracking-tight">Weight</h3>
-            <p class="font-light text-2xl tracking-tight">0.55Kg</p>
+
+          <div class="flex flex-col gap-2">
+            <h3
+              class="font-bold text-xl lg:text-3xl opacity-70 uppercase tracking-widest"
+            >
+              Weight
+            </h3>
+            <p class="font-medium text-3xl lg:text-5xl">0.55 Kg</p>
           </div>
         </div>
       </div>
