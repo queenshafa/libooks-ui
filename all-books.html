@@ -17,6 +17,12 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assets//logo-libooks.png"
+      type="image/x-icon"
+    />
     <title>✦ – Libooks</title>
   </head>
   <body class="font-helvetica">
@@ -32,8 +38,6 @@
         class="burger-line block w-5 h-0.5 bg-current transition-all duration-500"
       ></span>
     </button>
-
-    <!-- Fullscreen Menu Overlay -->
     <nav
       id="mega-menu"
       class="fixed inset-0 w-screen h-screen text-white pointer-events-none"
@@ -60,7 +64,7 @@
         <ul class="flex flex-col gap-2">
           <li>
             <a
-              href="#"
+              href="index.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Home</a
             >
@@ -68,51 +72,24 @@
 
           <li>
             <a
-              href="#"
+              href="all-books.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Collection</a
             >
           </li>
+
           <li>
             <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Categories</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
+              href="index.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Books Borrowing</a
             >
           </li>
           <li>
             <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Testimonials</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
+              href="#contact"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Login</a
             >
           </li>
         </ul>
@@ -128,66 +105,48 @@
     </nav>
 
     <!-- Header -->
-    <section class="w-full bg-pattern px-8 py-8 text-gray">
-      <!-- <div
-        class="absolute inset-0 z-0"
-        style="
-          backgroundimage: radial-gradient(
-              circle at 50% 100%,
-              rgba(253, 224, 71, 0.4) 0%,
-              transparent 60%
-            ),
-            radial-gradient(
-              circle at 50% 100%,
-              rgba(251, 191, 36, 0.4) 0%,
-              transparent 70%
-            ),
-            radial-gradient(
-              circle at 50% 100%,
-              rgba(244, 114, 182, 0.5) 0%,
-              transparent 80%
-            );
-        "
-      > -->
-      <div class="bg-pattern">
-        <h1 class="text-4xl font-medium tracking-tight mt-80">
-          <span class="opacity-40">From our Mind, to yours</span> <br />
-          The exact tools we use to run Highful Minds
-        </h1>
-        <p class="mt-8 text-lg tracking-tight">
-          We've opened up the exact templates we use every day at Highful Minds
-          and shared them with fellow designers and studios. <br />
-          <br />
-          Because we truly believe great ideas deserve to be understood and
-          felt.
-        </p>
-      </div>
+    <section
+      class="relative w-full px-8 pt-48 pb-24 text-gray-700 bg-[radial-gradient(circle_at_50%_100%,rgba(253,224,71,0.4)_0%,transparent_60%),radial-gradient(circle_at_50%_100%,rgba(251,191,36,0.4)_0%,transparent_70%),radial-gradient(circle_at_50%_100%,rgba(244,114,182,0.5)_0%,transparent_80%)]"
+    >
+      <a
+        href="index.html"
+        class="text-sm tracking-widest uppercase opacity-40 mb-4 hover:bg-slate-600 hover:text-white"
+        ><i class="ri-arrow-left-line"></i> Back</a
+      >
+      <h1 class="text-5xl font-medium tracking-tight max-w-2xl leading-tight">
+        <span class="opacity-40">From our shelf, to your mind,</span> <br />
+        A complete archive for the modern learner.
+      </h1>
+      <p class="mt-6 tracking-tight max-w-md leading-relaxed">
+        We believe the best ideas start with the right resources. That’s why
+        we’ve curated a vast selection of textbooks and non-fiction, making them
+        available to you instantly—no barriers, just pure learning to help you
+        reach your full potential.
+      </p>
     </section>
 
     <!-- Content -->
     <section class="relative px-8 py-16 bg-white">
-      <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+      <h2 class="text-2xl font-medium tracking-tight">Collections</h2>
+
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mt-5">
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -199,35 +158,29 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -239,35 +192,29 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -279,35 +226,29 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -319,35 +260,29 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -359,35 +294,29 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
         <!-- Card -->
         <div
-          class="h-90 min-w-1/2 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
+          class="h-90 flex flex-col justify-between bg-secondary text-primary rounded-tl-2xl rounded-br-2xl group relative overflow-hidden"
         >
-          <!-- Background image — hidden by default, fades in on hover -->
           <img
             src="/assets/all-books-img.jpg"
             alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
-
           <div
             class="relative z-10 flex flex-col py-8 px-8 items-center justify-center mt-8"
           >
-            <!-- Book image — visible by default, hides on hover -->
             <img
               src="/assets/Screenshot 2026-04-21 at 10.11.16.png"
               alt="The Let Them Theory"
               class="w-20 shadow-2xl group-hover:invisible transition-opacity duration-300"
             />
-
             <p
               class="mt-8 font-light tracking-tight transition-colors duration-300"
             >
@@ -399,12 +328,10 @@
               The Let Them Theory
             </h3>
           </div>
-
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="book-details.html">View Book</a>
           </div>
         </div>
       </div>
@@ -416,7 +343,7 @@
       <div class="lg:hidden min-h-screen px-4 py-4 text-center">
         <p class="text-5xl mt-45"><i class="ri-asterisk"></i></p>
         <div class="bg-primary w-full">
-          <h2 class="text-9xl text-gray mt-8">Libooks</h2>
+          <h2 class="text-9xl text-gray mt-8">libooks</h2>
         </div>
         <div class="flex flex-col">
           <div class="border-b border-b-white py-4 mt-8">
@@ -453,7 +380,7 @@
           <h2
             class="text-gray font-medium text-[165px] py-4 text-center leading-none whitespace-nowrap"
           >
-            The Libooks E-Library
+            The libooks E-library
           </h2>
         </div>
         <div class="flex items-stretch" style="min-height: 100px">
@@ -495,33 +422,16 @@
       </div>
     </footer>
 
-    <script>
-      // Navbar thingy
-      const btn = document.getElementById("open-menu");
-      const menuBg = document.getElementById("menu-bg");
-      const menuContent = document.getElementById("menu-content");
-      const menu = document.getElementById("mega-menu");
-      const burgerLines = document.querySelectorAll(".burger-line");
-      let open = false;
+    <!-- Cursor -->
+    <div
+      id="cursor"
+      class="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[10000] mix-blend-difference"
+    ></div>
+    <div
+      id="follower"
+      class="fixed top-0 left-0 w-[30px] h-[30px] border-2 border-white rounded-full opacity-50 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[10000] mix-blend-difference transition-[transform,width,height] duration-150 ease-out"
+    ></div>
 
-      btn.addEventListener("click", () => {
-        open = !open;
-
-        if (open) {
-          menu.style.pointerEvents = "all";
-          menuBg.style.transform = "scaleY(1)";
-          menuContent.style.opacity = "1";
-
-          burgerLines[0].style.transform = "translateY(3.5px) rotate(45deg)";
-          burgerLines[1].style.transform = "translateY(-3.5px) rotate(-45deg)";
-        } else {
-          menu.style.pointerEvents = "none";
-          menuBg.style.transform = "scaleY(0)";
-          menuContent.style.opacity = "0";
-          burgerLines[0].style.transform = "";
-          burgerLines[1].style.transform = "";
-        }
-      });
-    </script>
+    <script src="/js/index.js"></script>
   </body>
 </html>

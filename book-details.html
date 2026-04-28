@@ -22,7 +22,12 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
       rel="stylesheet"
     />
-
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assets//logo-libooks.png"
+      type="image/x-icon"
+    />
     <title>✦ – Libooks</title>
   </head>
   <body>
@@ -38,8 +43,6 @@
         class="burger-line block w-5 h-0.5 bg-current transition-all duration-500"
       ></span>
     </button>
-
-    <!-- Fullscreen Menu Overlay -->
     <nav
       id="mega-menu"
       class="fixed inset-0 w-screen h-screen text-white pointer-events-none"
@@ -66,7 +69,7 @@
         <ul class="flex flex-col gap-2">
           <li>
             <a
-              href="#"
+              href="index.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Home</a
             >
@@ -74,51 +77,24 @@
 
           <li>
             <a
-              href="#"
+              href="all-books.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Collection</a
             >
           </li>
+
           <li>
             <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Categories</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
+              href="index.html"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Books Borrowing</a
             >
           </li>
           <li>
             <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Testimonials</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
+              href="#contact"
               class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
               >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-6xl font-instrument-serif opacity-50 hover:opacity-100 transition-opacity duration-300 py-2 block"
-              >Login</a
             >
           </li>
         </ul>
@@ -754,7 +730,7 @@
       <div class="lg:hidden min-h-screen px-4 py-4 text-center">
         <p class="text-5xl mt-45"><i class="ri-asterisk"></i></p>
         <div class="bg-primary w-full">
-          <h2 class="text-9xl text-gray mt-8">Libooks</h2>
+          <h2 class="text-9xl text-gray mt-8">libooks</h2>
         </div>
         <div class="flex flex-col">
           <div class="border-b border-b-white py-4 mt-8">
@@ -791,7 +767,7 @@
           <h2
             class="text-gray font-medium text-[165px] py-4 text-center leading-none whitespace-nowrap"
           >
-            The Libooks E-Library
+            The libooks E-Library
           </h2>
         </div>
         <div class="flex items-stretch" style="min-height: 100px">
@@ -833,34 +809,17 @@
       </div>
     </footer>
 
+    <!-- Cursor -->
+    <div
+      id="cursor"
+      class="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-9999 mix-blend-difference"
+    ></div>
+    <div
+      id="follower"
+      class="fixed top-0 left-0 w-7.5 h-7.5 border-2 border-white rounded-full opacity-50 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-9999 mix-blend-difference transition-[transform,width,height] duration-150 ease-out"
+    ></div>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-    <script>
-      // Navbar thingy
-      const btn = document.getElementById("open-menu");
-      const menuBg = document.getElementById("menu-bg");
-      const menuContent = document.getElementById("menu-content");
-      const menu = document.getElementById("mega-menu");
-      const burgerLines = document.querySelectorAll(".burger-line");
-      let open = false;
-
-      btn.addEventListener("click", () => {
-        open = !open;
-
-        if (open) {
-          menu.style.pointerEvents = "all";
-          menuBg.style.transform = "scaleY(1)";
-          menuContent.style.opacity = "1";
-
-          burgerLines[0].style.transform = "translateY(3.5px) rotate(45deg)";
-          burgerLines[1].style.transform = "translateY(-3.5px) rotate(-45deg)";
-        } else {
-          menu.style.pointerEvents = "none";
-          menuBg.style.transform = "scaleY(0)";
-          menuContent.style.opacity = "0";
-          burgerLines[0].style.transform = "";
-          burgerLines[1].style.transform = "";
-        }
-      });
-    </script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
