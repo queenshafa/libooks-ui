@@ -109,6 +109,7 @@
       </div>
     </nav>
 
+    <!-- Main -->
     <section class="min-h-screen bg-white py-8 px-8 lg:px-16">
       <div
         class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-center lg:gap-24"
@@ -136,7 +137,11 @@
           </div>
 
           <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
-            <h1 class="text-4xl lg:text-7xl font-bold mb-4 tracking-tight">
+            <span
+              class="bg-primary text-white py-1.5 px-3 rounded-full text-sm tracking-tight"
+              >20 in stock</span
+            >
+            <h1 class="text-4xl lg:text-7xl font-bold mb-4 tracking-tight mt-4">
               The Let Them Theory
             </h1>
             <p class="text-gray-500 text-lg mb-8">By Mel Robbins</p>
@@ -240,11 +245,12 @@
               </ul>
             </div>
 
-            <button
-              class="w-full bg-[#3d3633] hover:bg-black py-5 text-xl font-bold rounded-2xl text-white transition-all transform active:scale-[0.98]"
+            <a
+              href="#loanForm"
+              class="block text-center w-full bg-[#3d3633] hover:bg-black py-5 text-xl font-bold rounded-2xl text-white transition-all transform active:scale-[0.98]"
             >
               Borrow Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -475,6 +481,89 @@
       </div>
     </section>
 
+    <!-- Loan Form -->
+    <section class="bg-white px-4 py-16" id="loanForm">
+      <div
+        class="w-full mx-auto flex flex-col md:flex-row max-md:items-center justify-center gap-12 md:gap-16"
+      >
+        <div class="flex flex-col justify-center mt-10">
+          <p
+            class="text-sm max-md:text-center font-medium text-zinc-500 uppercase mb-2"
+          >
+            Borrowing Books?
+          </p>
+          <h1
+            class="text-5xl/14 max-md:text-center font-bold text-zinc-900 max-w-2xs mb-4"
+          >
+            Fill out this form!
+          </h1>
+          <p class="text-base/5.5 text-zinc-400 max-md:text-center max-w-2xs">
+            How to pick the book up? <br />
+            <br />
+            1. Fill out and submit the form. <br />
+            2. Save your loan code. <br />
+            3. Come to the library you choose and show our librarian the code!
+            <br />
+            4. Enjoy the book! Don't forget to return it!
+          </p>
+        </div>
+
+        <div class="w-full max-w-sm border border-zinc-300 rounded-2xl p-8">
+          <h2 class="text-base font-medium text-zinc-800 mb-6">Loan Form</h2>
+          <form class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2.5">
+              <label class="text-xs text-zinc-400">Name</label>
+              <input
+                type="text"
+                placeholder="Eula Lawrence"
+                class="bg-zinc-50 border border-zinc-300 rounded-lg px-4 py-3 text-sm text-zinc-800 placeholder-zinc-400 outline-none focus:border-zinc-500 transition-colors"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+              <label class="text-xs text-zinc-400">Phone Number</label>
+              <input
+                type="tel"
+                placeholder="+1 234 567 89"
+                class="bg-zinc-50 border border-zinc-300 rounded-lg px-4 py-3 text-sm text-zinc-800 placeholder-zinc-400 outline-none focus:border-zinc-500 transition-colors"
+              />
+            </div>
+
+            <!-- <div class="flex flex-col gap-2.5">
+              <label class="text-xs text-zinc-400">Message</label>
+              <textarea
+                placeholder="How can we help you?"
+                rows="3"
+                class="bg-zinc-50 border border-zinc-300 rounded-lg px-4 py-3 text-sm text-zinc-800 placeholder-zinc-400 outline-none focus:border-zinc-500 transition-colors resize-none"
+              ></textarea>
+            </div> -->
+
+            <div class="flex flex-col gap-2.5">
+              <label class="text-xs text-zinc-400">Borrowing Durations</label>
+              <select
+                class="bg-zinc-50 border border-zinc-300 rounded-lg px-4 py-3 text-sm text-zinc-800 outline-none focus:border-zinc-500 transition-colors appearance-none"
+              >
+                <option>3 Days</option>
+                <option>7 Days</option>
+                <option>10 Days</option>
+                <option>14 Days</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              class="bg-black hover:bg-zinc-800 text-white text-base py-3 rounded-lg transition-colors cursor-pointer mt-2"
+            >
+              Send Loan Request
+            </button>
+            <p class="text-zinc-400 text-xs text-center">
+              Psst.. your information is secured and books borrowing is 100%
+              free!
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
     <!-- You Might Also Like -->
     <section class="min-h-screen min-w-screen bg-white py-8 px-8">
       <h2 class="text-2xl font-light tracking-tight mt-4">
@@ -517,8 +606,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
         <!-- Card -->
@@ -557,8 +645,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
         <!-- Card -->
@@ -597,8 +684,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
         <!-- Card -->
@@ -637,8 +723,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
         <!-- Card -->
@@ -677,8 +762,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
         <!-- Card -->
@@ -717,8 +801,7 @@
           <div
             class="relative z-10 bottom-0 flex justify-center visible lg:invisible group-hover:visible gap-x-4 bg-primary text-white w-full py-2 font-light"
           >
-            <a href="#" class="border-r border-r-white pr-4">View Book</a>
-            <p>$50.00</p>
+            <a href="#">View Book</a>
           </div>
         </div>
       </div>
@@ -765,9 +848,9 @@
         </div>
         <div class="bg-primary w-full overflow-hidden">
           <h2
-            class="text-gray font-medium text-[165px] py-4 text-center leading-none whitespace-nowrap"
+            class="text-gray font-medium text-[165px] py-4 text-center tracking-tighter leading-none whitespace-nowrap"
           >
-            The libooks E-Library
+            The Libooks E-Library
           </h2>
         </div>
         <div class="flex items-stretch" style="min-height: 100px">
